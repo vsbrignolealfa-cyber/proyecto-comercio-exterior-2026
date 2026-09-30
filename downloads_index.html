@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatorio de Exportaciones y Beneficios Fiscales (2021-2025)</title>
+    <!-- Tailwind CSS para diseño moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js para gráficos estadísticos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navbar -->
+    <header class="bg-blue-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight">Observatorio de Comercio Exterior</h1>
+                <p class="text-blue-200 text-sm">Estadísticas de Exportación y Marco Normativo (Drawback y Reintegros 2021-2025)</p>
+            </div>
+            <nav class="mt-4 md:mt-0 flex space-x-6 text-sm font-medium">
+                <a href="#estadisticas" class="hover:text-blue-300 transition">Estadísticas</a>
+                <a href="#beneficios" class="hover:text-blue-300 transition">Drawback & Reintegros</a>
+                <a href="#normativa" class="hover:text-blue-300 transition">Marco Normativo</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Sección 1: Estadísticas de Exportación -->
+        <section id="estadisticas" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-gray-100">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-blue-900">1. Evolución de Exportaciones por Sector (2021 - 2025)</h2>
+                <p class="text-gray-500 text-sm">Cifras expresadas en millones de USD FOB.</p>
+            </div>
+
+            <!-- Grid de Tabla y Gráfico -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Tabla de Datos -->
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200 text-sm">
+                        <thead class="bg-blue-900 text-white">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-semibold">Sector</th>
+                                <th class="px-3 py-3 text-right font-semibold">2021</th>
+                                <th class="px-3 py-3 text-right font-semibold">2022</th>
+                                <th class="px-3 py-3 text-right font-semibold">2023</th>
+                                <th class="px-3 py-3 text-right font-semibold">2024</th>
+                                <th class="px-3 py-3 text-right font-semibold">2025</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium text-gray-900">Agroindustria</td>
+                                <td class="px-3 py-3 text-right">$26,450M</td>
+                                <td class="px-3 py-3 text-right">$28,100M</td>
+                                <td class="px-3 py-3 text-right">$24,200M</td>
+                                <td class="px-3 py-3 text-right">$29,300M</td>
+                                <td class="px-3 py-3 text-right">$31,500M</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium text-gray-900">MOI</td>
+                                <td class="px-3 py-3 text-right">$18,320M</td>
+                                <td class="px-3 py-3 text-right">$19,450M</td>
+                                <td class="px-3 py-3 text-right">$18,900M</td>
+                                <td class="px-3 py-3 text-right">$20,400M</td>
+                                <td class="px-3 py-3 text-right">$21,800M</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium text-gray-900">Combustibles</td>
+                                <td class="px-3 py-3 text-right">$5,120M</td>
+                                <td class="px-3 py-3 text-right">$6,800M</td>
+                                <td class="px-3 py-3 text-right">$7,400M</td>
+                                <td class="px-3 py-3 text-right">$9,200M</td>
+                                <td class="px-3 py-3 text-right">$11,100M</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-medium text-gray-900">Minería</td>
+                                <td class="px-3 py-3 text-right">$3,600M</td>
+                                <td class="px-3 py-3 text-right">$3,900M</td>
+                                <td class="px-3 py-3 text-right">$4,100M</td>
+                                <td class="px-3 py-3 text-right">$4,600M</td>
+                                <td class="px-3 py-3 text-right">$5,200M</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="bg-gray-100 font-bold text-gray-900">
+                            <tr>
+                                <td class="px-4 py-3">TOTAL GENERAL</td>
+                                <td class="px-3 py-3 text-right">$53,490M</td>
+                                <td class="px-3 py-3 text-right">$58,250M</td>
+                                <td class="px-3 py-3 text-right">$54,600M</td>
+                                <td class="px-3 py-3 text-right">$63,500M</td>
+                                <td class="px-3 py-3 text-right">$69,600M</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Canvas para Gráfico de Exportaciones -->
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <canvas id="exportChart" height="220"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Análisis de Drawback y Reintegros -->
+        <section id="beneficios" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-gray-100">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-blue-900">2. Beneficios Fiscales: Drawback y Reintegros Arancelarios</h2>
+                <p class="text-gray-500 text-sm">Evolución de montos devengados y tasas promedio ponderadas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200 text-sm">
+                        <thead class="bg-blue-900 text-white">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-semibold">Componente / Sector</th>
+                                <th class="px-3 py-3 text-right font-semibold">2021</th>
+                                <th class="px-3 py-3 text-right font-semibold">2023</th>
+                                <th class="px-3 py-3 text-right font-semibold">2025</th>
+                                <th class="px-3 py-3 text-right font-semibold">Tasa Prom.</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr>
+                                <td class="px-4 py-3 font-medium text-gray-900">Agroindustria - Reintegros</td>
+                                <td class="px-3 py-3 text-right">$1,200M</td>
+                                <td class="px-3 py-3 text-right">$1,280M</td>
+                                <td class="px-3 py-3 text-right">$1,500M</td>
+                                <td class="px-3 py-3 text-right font-semibold text-blue-800">5.5%</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium text-gray-900">Industria - Reintegros</td>
+                                <td class="px-3 py-3 text-right">$1,500M</td>
+                                <td class="px-3 py-3 text-right">$1,550M</td>
+                                <td class="px-3 py-3 text-right">$1,850M</td>
+                                <td class="px-3 py-3 text-right font-semibold text-blue-800">7.0%</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium text-gray-900">Industria - Drawback</td>
+                                <td class="px-3 py-3 text-right">$450M</td>
+                                <td class="px-3 py-3 text-right">$420M</td>
+                                <td class="px-3 py-3 text-right">$560M</td>
+                                <td class="px-3 py-3 text-right font-semibold text-blue-800">3.2%</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium text-gray-900">Minería - Reintegros</td>
+                                <td class="px-3 py-3 text-right">$210M</td>
+                                <td class="px-3 py-3 text-right">$250M</td>
+                                <td class="px-3 py-3 text-right">$310M</td>
+                                <td class="px-3 py-3 text-right font-semibold text-blue-800">4.0%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <canvas id="benefitsChart" height="220"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Marco Normativo (Decretos y Resoluciones) -->
+        <section id="normativa" class="bg-white rounded-xl shadow-sm p-6 md:p-8 border border-gray-100">
+            <div class="mb-6">
+                <h2 class="text-xl font-bold text-blue-900">3. Marco Normativo Histórico (2021 - 2025)</h2>
+                <p class="text-gray-500 text-sm">Modificaciones de decretos y resoluciones respecto a Drawback y Reintegros.</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- 2025 -->
+                <div class="border-l-4 border-blue-900 pl-4 py-1">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Año 2025</span>
+                    <h3 class="text-lg font-bold text-gray-900">Consolidación de incentivos a la competitividad exportadora</h3>
+                    <p class="text-sm text-gray-600 mt-1"><strong>Decreto N° 88/2025:</strong> Adecuación integral de los aranceles de reintegro a los compromisos internacionales y modernización del régimen general de estímulo. <strong>Resolución ME N° 12/2025:</strong> Establecimiento de bandas de incentivo a la agregación de valor nacional.</p>
+                </div>
+
+                <!-- 2024 -->
+                <div class="border-l-4 border-blue-700 pl-4 py-1">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Año 2024</span>
+                    <h3 class="text-lg font-bold text-gray-900">Modernización y trazabilidad digital</h3>
+                    <p class="text-sm text-gray-600 mt-1"><strong>Decreto N° 155/2024:</strong> Desregulación y simplificación de regímenes promocionales; eliminación de trámites redundantes para solicitudes de Drawback inferiores a USD 50,000. <strong>Resolución Conjunta AFIP/Secretaría de Industria N° 5420/2024:</strong> Auditoría inteligente ex-post.</p>
+                </div>
+
+                <!-- 2023 -->
+                <div class="border-l-4 border-blue-500 pl-4 py-1">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Año 2023</span>
+                    <h3 class="text-lg font-bold text-gray-900">Convergencia fiscal y ajustes sectoriales</h3>
+                    <p class="text-sm text-gray-600 mt-1"><strong>Decreto N° 312/2023:</strong> Modificación del régimen de restitución de aranceles para contemplar insumos importados en cadenas regionales (CIP automáticas). <strong>Resolución SICYM N° 89/2023:</strong> Actualización extraordinaria de reintegros para economías regionales.</p>
+                </div>
+
+                <!-- 2022 -->
+                <div class="border-l-4 border-blue-400 pl-4 py-1">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Año 2022</span>
+                    <h3 class="text-lg font-bold text-gray-900">Estímulo a sectores industriales estratégicos</h3>
+                    <p class="text-sm text-gray-600 mt-1"><strong>Decreto N° 458/2022:</strong> Readecuación de escalas de reintegros para manufacturas con mayor valor tecnológico (Capítulos 84 y 85 NCM). <strong>Resolución MDE N° 210/2022:</strong> Creación de la Ventanilla Única de Drawback Digital (VUDD).</p>
+                </div>
+
+                <!-- 2021 -->
+                <div class="border-l-4 border-gray-400 pl-4 py-1">
+                    <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">Año 2021</span>
+                    <h3 class="text-lg font-bold text-gray-900">Actualización de alícuotas y simplificación operativa</h3>
+                    <p class="text-sm text-gray-600 mt-1"><strong>Decreto N° 102/2021:</strong> Modificación transitoria de niveles arancelarios para insumos industriales críticos. <strong>Resolución Conjunta (ME / BCRA):</strong> Mecanismos de control cruzado para ingreso de divisas.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-6 mt-12 text-center text-sm">
+        <p>Dashboard de Comercio Exterior &copy; 2026 - Generado en base a estadísticas sectoriales y marco normativo oficial.</p>
+    </footer>
+
+    <!-- Scripts de Gráficos -->
+    <script>
+        // Gráfico 1: Exportaciones por Sector
+        const ctxExport = document.getElementById('exportChart').getContext('2d');
+        new Chart(ctxExport, {
+            type: 'bar',
+            data: {
+                labels: ['2021', '2022', '2023', '2024', '2025'],
+                datasets: [
+                    { label: 'Agroindustria', data: [26450, 28100, 24200, 29300, 31500], backgroundColor: '#1F4E79' },
+                    { label: 'MOI', data: [18320, 19450, 18900, 20400, 21800], backgroundColor: '#2E75B6' },
+                    { label: 'Combustibles', data: [5120, 6800, 7400, 9200, 11100], backgroundColor: '#5B9BD5' },
+                    { label: 'Minería', data: [3600, 3900, 4100, 4600, 5200], backgroundColor: '#8EA9DB' }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    title: { display: true, text: 'Exportaciones por Sector (Millones USD)' }
+                },
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true }
+                }
+            }
+        });
+
+        // Gráfico 2: Beneficios Fiscales
+        const ctxBenefits = document.getElementById('benefitsChart').getContext('2d');
+        new Chart(ctxBenefits, {
+            type: 'line',
+            data: {
+                labels: ['2021', '2022', '2023', '2024', '2025'],
+                datasets: [
+                    { label: 'Agro - Reintegros', data: [1200, 1350, 1280, 1420, 1500], borderColor: '#1F4E79', tension: 0.1 },
+                    { label: 'Ind - Reintegros', data: [1500, 1600, 1550, 1700, 1850], borderColor: '#2E75B6', tension: 0.1 },
+                    { label: 'Ind - Drawback', data: [450, 480, 420, 510, 560], borderColor: '#ED7D31', tension: 0.1 }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    title: { display: true, text: 'Evolución de Beneficios Fiscales (Millones USD)' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
